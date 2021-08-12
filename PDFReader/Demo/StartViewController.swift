@@ -23,7 +23,7 @@ internal final class StartViewController: UIViewController {
     
     /// Displays a larger sized PDF document
     @IBAction private func showRemotePDFDocument() {
-        let remotePDFDocumentURLPath = "http://devstreaming.apple.com/videos/wwdc/2016/201h1g4asm31ti2l9n1/201/201_internationalization_best_practices.pdf"
+        let remotePDFDocumentURLPath = "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf".addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed)!
         if let remotePDFDocumentURL = URL(string: remotePDFDocumentURLPath), let doc = document(remotePDFDocumentURL) {
             showDocument(doc)
         } else {
