@@ -126,8 +126,7 @@
 		14083FE41D4A956E00909913 /* Sources */ = {
 			isa = PBXGroup;
 			children = (
-				14083FE51D4A956E00909913 /* Assets */,
-				14083FE71D4A956E00909913 /* Classes */,
+				9BA5F63B26C53046006FDD8C /* PDFReader */,
 			);
 			path = Sources;
 			sourceTree = SOURCE_ROOT;
@@ -177,6 +176,15 @@
 				146D37221DAB7F0F004EEFA5 /* mongodb.pdf */,
 			);
 			path = ExamplePDFs;
+			sourceTree = "<group>";
+		};
+		9BA5F63B26C53046006FDD8C /* PDFReader */ = {
+			isa = PBXGroup;
+			children = (
+				14083FE51D4A956E00909913 /* Assets */,
+				14083FE71D4A956E00909913 /* Classes */,
+			);
+			path = PDFReader;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -488,6 +496,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = XCODE_PROJECT;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
@@ -514,6 +523,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = XCODE_PROJECT;
 				SWIFT_VERSION = 5.0;
 			};
 			name = Release;

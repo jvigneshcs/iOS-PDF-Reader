@@ -8,6 +8,13 @@
 import UIKit
 
 extension PDFViewController {
+    
+    #if XCODE_PROJECT
+    private static var bundle = Bundle(for: PDFViewController.self)
+    #else
+    private static var bundle = Bundle.module
+    #endif
+    
     /// Initializes a new `PDFViewController`
     ///
     /// - parameter document:            PDF document to be displayed
@@ -21,7 +28,7 @@ extension PDFViewController {
     ///
     /// - returns: a `PDFViewController`
     public class func createNew(with document: PDFDocument, title: String? = nil, actionButtonImage: UIImage? = nil, actionStyle: ActionStyle = .print, backButton: UIBarButtonItem? = nil, isThumbnailsEnabled: Bool = true, startPageIndex: Int = 0) -> PDFViewController {
-        let storyboard = UIStoryboard(name: "PDFReader", bundle: Bundle(for: PDFViewController.self))
+        let storyboard = UIStoryboard(name: "PDFReader", bundle: Self.bundle)
         let controller = storyboard.instantiateInitialViewController() as! PDFViewController
         controller.document = document
         controller.actionStyle = actionStyle
